@@ -1,0 +1,21 @@
+<ngx-spinner bdOpacity=0.9 bdColor="#333" size="medium" color="#fff" type="pacman" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Username" [(ngModel)]="id" name="id">
+  </mat-form-field>
+  <br>
+  <div *ngIf=showID>
+    <button mat-raised-button color="primary" (click)="validateUserVal()">Submit1</button>
+  </div>
+  <br>
+  <div *ngIf=showPassword>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" [(ngModel)]="pwd" name="pwd">
+  </mat-form-field>
+</div>
+  <br>
+  <button mat-raised-button color="primary" *ngIf=showPassword (click)="login()">Submit2</button>
+  <!-- <button mat-raised-button color="primary" (click)="login()">Submit</button> -->
+</form>

@@ -1,0 +1,19 @@
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#333"
+size = "medium"
+color = "#fff"
+type = "pacman"
+[fullScreen] = "true"
+>
+<p style="color: white" > Loading... </p>
+</ngx-spinner>
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Username" [(ngModel)]="registerReq.id">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" [(ngModel)]="registerReq.pwd">
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" (click)="register()">Register</button>
